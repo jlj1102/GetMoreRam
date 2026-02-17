@@ -18,7 +18,7 @@ struct AppIDEditView : View {
                 Button {
                     Task { await addIncreasedMemoryLimit() }
                 } label: {
-                    Text("Add Increased Memory Limit")
+                    Text("增加内存上限")
                 }
             }
             
@@ -26,11 +26,11 @@ struct AppIDEditView : View {
                 Text(viewModel.result)
                     .font(.system(.subheadline, design: .monospaced))
             } header: {
-                Text("Server Response")
+                Text("服务器响应")
             }
         }
-        .alert("Error", isPresented: $errorShow){
-            Button("OK".loc, action: {
+        .alert("错误", isPresented: $errorShow){
+            Button("确定".loc, action: {
             })
         } message: {
             Text(errorInfo)
@@ -69,17 +69,17 @@ struct AppIDView : View {
                         }
                     }
                 } header: {
-                    Text("App IDs")
+                    Text("应用ID")
                 }
                 
                 Section {
-                    Button("Refresh") {
+                    Button("刷新") {
                         Task { await refreshButtonClicked() }
                     }
                 }
             }
-            .alert("Error", isPresented: $errorShow){
-                Button("OK".loc, action: {
+            .alert("错误", isPresented: $errorShow){
+                Button("确定".loc, action: {
                 })
             } message: {
                 Text(errorInfo)
