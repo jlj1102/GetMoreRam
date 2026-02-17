@@ -15,7 +15,7 @@ The Chinese translation is available in this build but only Chinese!!
 8. 检查你是否有更多的可使用内存 ｜ Check if you have "Increased Memory Limit"
 提示：一般而言，你的软件公用内存将会从4GB到6GB，你可以去设置开发者页打开HUD以进行内存监控
 
-# Credits
-Stossy11 - For StosSign.
-SideStore - Anisette Data fetching codes are stolen from SideStore
-jlj1102 - This Chinese fork
+# 鸣谢/Credits
+Stossy11 - For StosSign. | 软件制作者<br>
+SideStore - Anisette Data fetching codes are stolen from SideStore ｜ 从SideStore顺来获取数据的代码<br>
+jlj1102 - This Chinese fork ｜ 这个fork以及中文、图标
