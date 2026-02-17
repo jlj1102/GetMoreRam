@@ -25,27 +25,27 @@ struct SettingsView: View {
             Section {
                 if sharedModel.isLogin {
                     HStack {
-                        Text("Email")
+                        Text("邮箱")
                         Spacer()
                         Text(email)
                     }
                     HStack {
-                        Text("Team ID")
+                        Text("团队ID")
                         Spacer()
                         Text(teamId)
                     }
                 } else {
-                    Button("Sign in") {
+                    Button("登入") {
                         viewModel.loginModalShow = true
                     }
                 }
             } header: {
-                Text("Account")
+                Text("账户")
             }
             
             Section {
                 HStack {
-                    Text("Anisette Server URL")
+                    Text("Anisette服务器")
                     Spacer()
                     TextField("", text: $sharedModel.anisetteServerURL)
                         .multilineTextAlignment(.trailing)
@@ -53,15 +53,15 @@ struct SettingsView: View {
             }
             
             Section {
-                Button("Clean Up Keychain") {
+                Button("清理钥匙串") {
                     cleanUp()
                 }
             } footer: {
-                Text("If something went wrong during signing in, please try to clean up the keychain, repoen the app and try again.")
+                Text("如果登录时报错，请尝试清理钥匙串，再重新打开软件。")
             }
         }
-        .alert("Error", isPresented: $errorShow){
-            Button("OK".loc, action: {
+        .alert("错误", isPresented: $errorShow){
+            Button("确定".loc, action: {
             })
         } message: {
             Text(errorInfo)
@@ -88,17 +88,17 @@ struct SettingsView: View {
                     SecureField("", text: $viewModel.password)
                         .disabled(viewModel.isLoginInProgress)
                 } header: {
-                    Text("Password")
+                    Text("密码")
                 }
                 if viewModel.needVerificationCode {
                     Section {
                         TextField("", text: $viewModel.verificationCode)
                     } header: {
-                        Text("Verification Code")
+                        Text("二次验证码")
                     }
                 }
                 Section {
-                    Button("Continue") {
+                    Button("继续") {
                         Task{ await loginButtonClicked() }
                     }
                 }
@@ -107,14 +107,14 @@ struct SettingsView: View {
                     Text(viewModel.logs)
                         .font(.system(.subheadline, design: .monospaced))
                 } header: {
-                    Text("Debugging")
+                    Text("调试日志")
                 }
             }
-            .navigationTitle("Sign in")
+            .navigationTitle("登录")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel", role: .cancel) {
+                    Button("取消", role: .cancel) {
                         viewModel.loginModalShow = false
                     }
                 }
