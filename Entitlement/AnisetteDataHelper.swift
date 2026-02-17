@@ -37,7 +37,7 @@ final class AnisetteDataHelper: WebSocketDelegate
     {
         
         if url == nil {
-            throw "No Anisette Server Found!"
+            throw 找不到Anisette服务器喵～（如果被误删了请你重装）"
         }
         
         self.printOut("Anisette URL: \(self.url!.absoluteString)")
@@ -67,7 +67,7 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("Error message contains -45061 (not provisioned), resetting adi.pb and retrying")
                         Keychain.shared.adiPb = nil
                         return try await provision()
-                    } else { throw message ?? "Unknown error" }
+                    } else { throw message ?? "未知错误" }
                 }
             }
             
@@ -114,10 +114,10 @@ final class AnisetteDataHelper: WebSocketDelegate
                 let jsonData = try JSONEncoder().encode(formattedJSON)
                 let anisette = try JSONDecoder().decode(AnisetteData.self, from: jsonData)
                 
-                self.printOut("Anisette is valid!")
+                self.printOut("Anisette服务器有效！")
                 return anisette
             } catch {
-                self.printOut("Anisette is invalid!!!!")
+                self.printOut("Anisette服务器炸了!!!!")
                 if v3 {
                     throw "Invalid anisette (the returned data may not have all the required fields)"
                 } else {
@@ -156,7 +156,7 @@ final class AnisetteDataHelper: WebSocketDelegate
             return try await self.startProvisioningSession()
         } else {
             self.printOut("Apple didn't give valid URLs! Got response: \(String(data: data, encoding: .utf8) ?? "not utf8")")
-            throw "Apple didn't give valid URLs. Please try again later"
+            throw "Apple开发者api没有提供网址，请你稍后再试"
         }
 
         
