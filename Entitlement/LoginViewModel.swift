@@ -73,7 +73,7 @@ class LoginViewModel: ObservableObject {
                 }
             }
         }
-        logging(text: "Successfully signed in")
+        logging(text: "恭喜登录成功！")
         
         DataManager.shared.model.account = account
         DataManager.shared.model.session = session
@@ -81,7 +81,7 @@ class LoginViewModel: ObservableObject {
         Keychain.shared.appleIDPassword = self.password
         
         let team = try await fetchTeam(for: account, session: session)
-        logging(text: "Successfully fetched team")
+        logging(text: "团队获取成功！")
         DataManager.shared.model.team = team
         
         Task{ await MainActor.run {
@@ -104,7 +104,7 @@ class LoginViewModel: ObservableObject {
             }
         }
         guard let fetchedTeams, !fetchedTeams.isEmpty, let team = fetchedTeams.first else {
-            throw "Unable to Fetch Team!"
+            throw "无法获取团队"
         }
         
         return team
