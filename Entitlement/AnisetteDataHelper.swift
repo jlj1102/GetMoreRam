@@ -37,7 +37,7 @@ final class AnisetteDataHelper: WebSocketDelegate
     {
         
         if url == nil {
-            throw 找不到Anisette服务器喵～（如果被误删了请你重装）"
+            throw "找不到Anisette服务器喵～（如果被误删了请你重装）"
         }
         
         self.printOut("Anisette URL: \(self.url!.absoluteString)")
