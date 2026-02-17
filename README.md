@@ -1,5 +1,6 @@
 # Get More Ram
 A simple [StosSign](https://github.com/stossy11/StosSign) wrapper app that allows you to enable "Increased Memory Limit" for your sideloaded apps without using Xcode.
+The Chinese translation is available in this build but only Chinese!!
 
 # How to use
 1. Sideload this app
