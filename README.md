@@ -3,6 +3,7 @@
 提示：这个fork已经被写的大部分都是中文了，增加了耐看图标和中文翻译<br>TIP: This fork is localized to Chinese, which added good-looking icon and Chinese localization (No English)<br>
 A simple [StosSign](https://github.com/stossy11/StosSign) wrapper app that allows you to enable "Increased Memory Limit" for your sideloaded apps without using Xcode.
 <br>The Chinese translation is available in this build but only Chinese!!
+<br>The multi-language is processing with VSCode!!!
 
 # 如何使用/How to use
 1. 侧载这个软件 ｜ Sideload this app
