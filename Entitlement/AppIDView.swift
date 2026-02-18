@@ -69,7 +69,7 @@ struct AppIDView : View {
                         }
                     }
                 } header: {
-                    Text("应用ID")
+                    Text("appids")
                 }
                 
                 Section {
