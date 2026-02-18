@@ -18,8 +18,8 @@
 /* Begin PBXFileReference section */
 		173496F02D847E82007994DB /* Entitlement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entitlement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D124782D85856000796C1D /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:67RAULRX93:Marcin Krzyzanowski"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = OpenSSL/Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
-		EN_LPROJ /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
-		ZH_LPROJ /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = zh-Hans.lproj; sourceTree = "<group>"; };
+		EN_LPROJ /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder.localized; path = Entitlement/Resources/en.lproj; sourceTree = "<group>"; };
+		ZH_LPROJ /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder.localized; path = Entitlement/Resources/zh-Hans.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
