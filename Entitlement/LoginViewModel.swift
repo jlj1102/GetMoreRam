@@ -69,11 +69,11 @@ class LoginViewModel: ObservableObject {
                 if let account, let session {
                     c.resume(returning: (account, session))
                 } else {
-                    c.resume(throwing: "Account or session is nil. Please try again or reopen the app.")
+                    c.resume(throwing: "nilaccountsession")
                 }
             }
         }
-        logging(text: "恭喜登录成功！")
+        logging(text: "succeedlogin")
         
         DataManager.shared.model.account = account
         DataManager.shared.model.session = session

@@ -1,1 +1,16 @@
 appids = "App IDs";
+addmemlimit = "Add Increased Memory Limit";
+srvresp = "Server Response";
+err = "ERROR";
+ok = "OK";
+refresh = "Refresh";
+loginfirst = "Please Login first (OR your login status is bad)";
+settings = "Settings";
+noanisetteurl = "No Anisette Server is found. (https://ani.sidestore.io By Default)";
+anisetteurl = "Anisette URL:";
+nilappid = "AppIDs is nil. Please try again or reopen the app.";
+unkerr = "Unknown Error";
+validanisetteurl = "Anisette URL valid!";
+nilaccountsession = "Account or session is nil. Please try again or reopen the app.";
+succeedlogin = "Logged in successfully!";
+invalidanisetteurl = “Anisette URL is not valid!!!”

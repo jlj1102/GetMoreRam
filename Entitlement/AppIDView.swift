@@ -3,6 +3,7 @@
 //  Entitlement
 //
 //  Created by s s on 2025/3/15.
+//  Modified by jlj1102 on 2026/2/19.
 //
 import SwiftUI
 
@@ -18,7 +19,7 @@ struct AppIDEditView : View {
                 Button {
                     Task { await addIncreasedMemoryLimit() }
                 } label: {
-                    Text("增加内存上限")
+                    Text("addmemlimit")
                 }
             }
             
@@ -26,11 +27,11 @@ struct AppIDEditView : View {
                 Text(viewModel.result)
                     .font(.system(.subheadline, design: .monospaced))
             } header: {
-                Text("服务器响应")
+                Text("srvresp")
             }
         }
-        .alert("错误", isPresented: $errorShow){
-            Button("确定".loc, action: {
+        .alert("err", isPresented: $errorShow){
+            Button("ok".loc, action: {
             })
         } message: {
             Text(errorInfo)
@@ -73,13 +74,13 @@ struct AppIDView : View {
                 }
                 
                 Section {
-                    Button("刷新") {
+                    Button("refresh") {
                         Task { await refreshButtonClicked() }
                     }
                 }
             }
-            .alert("错误", isPresented: $errorShow){
-                Button("确定".loc, action: {
+            .alert("err", isPresented: $errorShow){
+                Button("ok".loc, action: {
                 })
             } message: {
                 Text(errorInfo)

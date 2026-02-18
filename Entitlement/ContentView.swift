@@ -12,11 +12,11 @@ struct ContentView: View {
         TabView {
             AppIDView(viewModel: AppIDViewModel())
                 .tabItem {
-                    Label("应用ID".loc, systemImage: "square.stack.3d.up.fill")
+                    Label("appids".loc, systemImage: "square.stack.3d.up.fill")
                 }
             SettingsView(viewModel: LoginViewModel())
                 .tabItem {
-                    Label("设置".loc, systemImage: "gearshape.fill")
+                    Label("settings".loc, systemImage: "gearshape.fill")
                 }
         }
 

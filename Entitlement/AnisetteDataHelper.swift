@@ -37,10 +37,10 @@ final class AnisetteDataHelper: WebSocketDelegate
     {
         
         if url == nil {
-            throw "找不到Anisette服务器喵～（如果被误删了请你重装）"
+            throw "noanisetteurl"
         }
         
-        self.printOut("Anisette URL: \(self.url!.absoluteString)")
+        self.printOut("\("anisetteurl".Loc) \(self.url!.absoluteString)")
         
         let ans : AnisetteData
         if let identifier = Keychain.shared.identifier,
@@ -67,7 +67,7 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("Error message contains -45061 (not provisioned), resetting adi.pb and retrying")
                         Keychain.shared.adiPb = nil
                         return try await provision()
-                    } else { throw message ?? "未知错误" }
+                    } else { throw message ?? "unkerr" }
                 }
             }
             
@@ -114,10 +114,10 @@ final class AnisetteDataHelper: WebSocketDelegate
                 let jsonData = try JSONEncoder().encode(formattedJSON)
                 let anisette = try JSONDecoder().decode(AnisetteData.self, from: jsonData)
                 
-                self.printOut("Anisette服务器有效！")
+                self.printOut("validanisetteurl")
                 return anisette
             } catch {
-                self.printOut("Anisette服务器炸了!!!!")
+                self.printOut("invalidanisetteurl")
                 if v3 {
                     throw "Invalid anisette (the returned data may not have all the required fields)"
                 } else {
