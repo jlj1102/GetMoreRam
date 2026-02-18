@@ -40,7 +40,7 @@ final class AnisetteDataHelper: WebSocketDelegate
             throw "noanisetteurl"
         }
         
-        self.printOut("\("anisetteurl".Loc) \(self.url!.absoluteString)")
+        self.printOut("anisetteurl \(self.url!.absoluteString)")
         
         let ans : AnisetteData
         if let identifier = Keychain.shared.identifier,
