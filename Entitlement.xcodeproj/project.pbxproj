@@ -10,15 +10,16 @@
 		17EE68B02D848EA100B77523 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 17EE68AF2D848EA100B77523 /* Starscream */; };
 		17EE68B32D848EF000B77523 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 17EE68B22D848EF000B77523 /* KeychainAccess */; };
 		4EE1A6092D954CE9007D655E /* StosSign in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE1A6082D954CE9007D655E /* StosSign */; };
-		/* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = /* en.lproj */; };
-		/* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = /* zh-Hans.lproj */; };
+		EN_LPROJ_BUILD /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EN_LPROJ /* en.lproj */; };
+		ZH_LPROJ_BUILD /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ZH_LPROJ /* zh-Hans.lproj */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		173496F02D847E82007994DB /* Entitlement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entitlement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D124782D85856000796C1D /* OpenSSL.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:67RAULRX93:Marcin Krzyzanowski"; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = OpenSSL/Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
-		/* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
-		/* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = zh-Hans.lproj; sourceTree = "<group>"; };
+		EN_LPROJ /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		ZH_LPROJ /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = zh-Hans.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,8 +51,6 @@
 				4EE1A6092D954CE9007D655E /* StosSign in Frameworks */,
 				17EE68B32D848EF000B77523 /* KeychainAccess in Frameworks */,
 				17EE68B02D848EA100B77523 /* Starscream in Frameworks */,
-				/* en.lproj in Resources */,
-				/* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +63,8 @@
 				173496F22D847E82007994DB /* Entitlement */,
 				173497042D847F5A007994DB /* Frameworks */,
 				173496F12D847E82007994DB /* Products */,
-				/* en.lproj */,
-				/* zh-Hans.lproj */,
+				EN_LPROJ /* en.lproj */,
+				ZH_LPROJ /* zh-Hans.lproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +132,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				zh-Hans,
 				Base,
 			);
 			mainGroup = 173496E72D847E82007994DB;
@@ -157,6 +157,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EN_LPROJ_BUILD /* en.lproj in Resources */,
+				ZH_LPROJ_BUILD /* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,7 +53,7 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           echo "file_to_build=$file_to_build" >> $GITHUB_OUTPUT
       - name: Debug XCodebuild
-        run: xcodebuild -showBuildSettings | grep LOCALIZED
+        run: xcodebuild -scheme Entitlement -showBuildSettings | grep knownRegions
       - name: Build
         env:
           scheme: ${{ steps.scheme.outputs.scheme }}
