@@ -40,7 +40,7 @@ final class AnisetteDataHelper: WebSocketDelegate
             throw "noanisetteurl"
         }
         
-        self.printOut("anisetteurl \(self.url!.absoluteString)")
+        self.printOut("\(NSLocalizedString("anisetteurl", comment: "")) \(self.url!.absoluteString)")
         
         let ans : AnisetteData
         if let identifier = Keychain.shared.identifier,
@@ -114,10 +114,10 @@ final class AnisetteDataHelper: WebSocketDelegate
                 let jsonData = try JSONEncoder().encode(formattedJSON)
                 let anisette = try JSONDecoder().decode(AnisetteData.self, from: jsonData)
                 
-                self.printOut("validanisetteurl")
+                self.printOut("\(NSLocalizedString("validanisetteurl", comment: ""))")
                 return anisette
             } catch {
-                self.printOut("invalidanisetteurl")
+                self.printOut("\(NSLocalizedString("invalidanisetteurl", comment: ""))")
                 if v3 {
                     throw "Invalid anisette (the returned data may not have all the required fields)"
                 } else {
