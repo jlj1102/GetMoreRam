@@ -3,7 +3,7 @@
 //  Entitlement
 //
 //  Created by s s on 2025/3/14.
-//
+//  Translated by jlj1102 on 2026/2/19.
 
 import SwiftUI
 import StosSign
@@ -25,27 +25,27 @@ struct SettingsView: View {
             Section {
                 if sharedModel.isLogin {
                     HStack {
-                        Text("邮箱")
+                        Text("email")
                         Spacer()
                         Text(email)
                     }
                     HStack {
-                        Text("团队ID")
+                        Text("teamid")
                         Spacer()
                         Text(teamId)
                     }
                 } else {
-                    Button("登入") {
+                    Button("login") {
                         viewModel.loginModalShow = true
                     }
                 }
             } header: {
-                Text("账户")
+                Text("account")
             }
             
             Section {
                 HStack {
-                    Text("Anisette服务器")
+                    Text("aniserv")
                     Spacer()
                     TextField("", text: $sharedModel.anisetteServerURL)
                         .multilineTextAlignment(.trailing)
@@ -53,15 +53,15 @@ struct SettingsView: View {
             }
             
             Section {
-                Button("清理钥匙串") {
+                Button("clrkey") {
                     cleanUp()
                 }
             } footer: {
-                Text("如果登录时报错，请尝试清理钥匙串，再重新打开软件。")
+                Text("clrkeydesc")
             }
         }
-        .alert("错误", isPresented: $errorShow){
-            Button("确定".loc, action: {
+        .alert("err", isPresented: $errorShow){
+            Button("ok".loc, action: {
             })
         } message: {
             Text(errorInfo)
@@ -88,17 +88,17 @@ struct SettingsView: View {
                     SecureField("", text: $viewModel.password)
                         .disabled(viewModel.isLoginInProgress)
                 } header: {
-                    Text("密码")
+                    Text("password")
                 }
                 if viewModel.needVerificationCode {
                     Section {
                         TextField("", text: $viewModel.verificationCode)
                     } header: {
-                        Text("二次验证码")
+                        Text("twofa")
                     }
                 }
                 Section {
-                    Button("继续") {
+                    Button("continue") {
                         Task{ await loginButtonClicked() }
                     }
                 }
@@ -107,14 +107,14 @@ struct SettingsView: View {
                     Text(viewModel.logs)
                         .font(.system(.subheadline, design: .monospaced))
                 } header: {
-                    Text("调试日志")
+                    Text("debugging")
                 }
             }
-            .navigationTitle("登录")
+            .navigationTitle("login")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("取消", role: .cancel) {
+                    Button("cancel", role: .cancel) {
                         viewModel.loginModalShow = false
                     }
                 }

@@ -81,7 +81,7 @@ class LoginViewModel: ObservableObject {
         Keychain.shared.appleIDPassword = self.password
         
         let team = try await fetchTeam(for: account, session: session)
-        logging(text: "团队获取成功！")
+        logging(text: "succeedteamfetch")
         DataManager.shared.model.team = team
         
         Task{ await MainActor.run {
@@ -104,7 +104,7 @@ class LoginViewModel: ObservableObject {
             }
         }
         guard let fetchedTeams, !fetchedTeams.isEmpty, let team = fetchedTeams.first else {
-            throw "无法获取团队"
+            throw "failfetchteam"
         }
         
         return team

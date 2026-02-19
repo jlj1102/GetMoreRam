@@ -1,3 +1,4 @@
+// From AppIDView.swift
 appids = "应用ID";
 addmemlimit = "增加内存上限";
 srvresp = "服务器响应";
@@ -5,7 +6,7 @@ err = "错误";
 ok = "确定";
 refresh = "刷新";
 loginfirst = "请你先登录喵~(如果已经登录就是出错了)";
-settings = "设置";
+// From debug log
 noanisetteurl = "找不到Anisette服务器喵，默认是(https://ani.sidestore.io)喵~";
 anisetteurl = "Anisette服务器:";
 nilappid = "appid是空的喵~，重新启动软件喵~";
@@ -14,3 +15,19 @@ validanisetteurl = "Anisette服务器有效！";
 nilaccountsession = "账号无效喵~";
 succeedlogin = "登陆成功！恭喜！";
 invalidanisetteurl = "这个Anesette服务器不能用喵~";
+// From SettingsView.swift & LoginViewModel.swift
+settings = "设置";
+email = "邮箱";
+teamid = "团队ID";
+login = "登录";
+account = "账号";
+aniserv = "Anisette服务器";
+clrkey = "清理钥匙串";
+clrkeydesc = "如果登录时报错，请尝试清理钥匙串，再重新打开软件。";
+password = "密码";
+twofa = "二次验证码";
+continue = "继续";
+debugging = "调试日志";
+cancel = "Cancel";
+succeedteamfetch = "团队获取成功";
+failfetchteam = "无法获取团队！";
