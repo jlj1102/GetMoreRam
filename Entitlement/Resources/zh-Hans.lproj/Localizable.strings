@@ -8,6 +8,7 @@ refresh = "刷新";
 loginfirst = "请你先登录喵~(如果已经登录就是出错了)";
 // From debug log
 noanisetteurl = "找不到Anisette服务器喵，默认是(https://ani.sidestore.io)喵~";
+novalidurlsgiven = "苹果没有给出有效的URL喵~，请稍后再试喵~";
 anisetteurl = "Anisette服务器:";
 nilappid = "appid是空的喵~，重新启动软件喵~";
 unkerr = "未知错误";

@@ -3,6 +3,7 @@
 //  AltStore
 //
 //  Created by Riley Testut on 1/7/20.
+// Translated by jlj1102 on 2026/2/30.
 //  Copyright © 2020 Riley Testut. All rights reserved.
 //
 
@@ -37,7 +38,7 @@ final class AnisetteDataHelper: WebSocketDelegate
     {
         
         if url == nil {
-            throw "noanisetteurl"
+            throw (NSLocalizedString("noanisetteurl", comment: ""))
         }
         
         self.printOut("\(NSLocalizedString("anisetteurl", comment: "")) \(self.url!.absoluteString)")
@@ -67,7 +68,7 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("Error message contains -45061 (not provisioned), resetting adi.pb and retrying")
                         Keychain.shared.adiPb = nil
                         return try await provision()
-                    } else { throw message ?? "unkerr" }
+                    } else { throw message ?? NSLocalizedString("unkerr", comment: "") }
                 }
             }
             
@@ -156,7 +157,7 @@ final class AnisetteDataHelper: WebSocketDelegate
             return try await self.startProvisioningSession()
         } else {
             self.printOut("Apple didn't give valid URLs! Got response: \(String(data: data, encoding: .utf8) ?? "not utf8")")
-            throw "Apple开发者api没有提供网址，请你稍后再试"
+            throw NSLocalizedString("novalidurlsgiven", comment: "")
         }
 
         
