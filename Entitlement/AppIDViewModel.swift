@@ -27,7 +27,7 @@ class AppIDModel : ObservableObject, Hashable {
     
     func addIncreasedMemory() async throws {
         guard let team = DataManager.shared.model.team, let session = DataManager.shared.model.session else {
-            throw "loginfirst"
+            throw NSLocalizedstring("loginfirst", comment: "")
         }
 
         let dateFormatter = ISO8601DateFormatter()
@@ -80,7 +80,7 @@ class AppIDViewModel : ObservableObject {
                     c.resume(throwing: error)
                 }
                 guard let appIDs else {
-                    c.resume(throwing: "nulappid")
+                    c.resume(throwing: NSLocalizedstring("nulappid", comment: ""))
                     return
                 }
                 c.resume(returning: appIDs)

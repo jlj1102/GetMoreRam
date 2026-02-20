@@ -120,16 +120,16 @@ final class AnisetteDataHelper: WebSocketDelegate
             } catch {
                 self.printOut("\(NSLocalizedString("invalidanisetteurl", comment: ""))")
                 if v3 {
-                    throw "Invalid anisette (the returned data may not have all the required fields)"
+                    throw NSLocalizedString("invalidanisettefields", comment: "")
                 } else {
-                    throw "Invalid anisette (the returned data may not have all the required fields)"
+                    throw NSLocalizedString("invalidanisettefields", comment: "")
                 }
             }
         } else {
             if v3 {
-                throw "Invalid anisette (the returned data may not be in JSON)"
+                throw NSLocalizedString("invalidanisettejson", comment: "")
             } else {
-                throw "Invalid anisette (the returned data may not be in JSON)"
+                throw NSLocalizedString("invalidanisettejson", comment: "")
             }
         }
     }
@@ -357,8 +357,8 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("X-Mme-Device-Id: \(self.deviceId!)")
                         
                         return
-                    } else { throw "v1 server is not supported" }
-                } else { throw "Couldn't fetch client info. The returned data may not be in JSON" }
+                    } else { throw NSLocalizedString("invalidv1server", comment: "") }
+                } else { throw NSLocalizedString("invalidclientinfo", comment: "") }
             }
 
     }

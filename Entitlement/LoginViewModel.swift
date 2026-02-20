@@ -69,11 +69,11 @@ class LoginViewModel: ObservableObject {
                 if let account, let session {
                     c.resume(returning: (account, session))
                 } else {
-                    c.resume(throwing: "nilaccountsession")
+                    c.resume(throwing: NSLocalizedstring("nilaccountsession", comment: ""))
                 }
             }
         }
-        logging(text: "succeedlogin")
+        logging(text: NSLocalizedstring("succeedlogin", comment: ""))
         
         DataManager.shared.model.account = account
         DataManager.shared.model.session = session
@@ -81,7 +81,7 @@ class LoginViewModel: ObservableObject {
         Keychain.shared.appleIDPassword = self.password
         
         let team = try await fetchTeam(for: account, session: session)
-        logging(text: "succeedteamfetch")
+        logging(text: NSLocalizedstring("succeedteamfetch", comment: ""))
         DataManager.shared.model.team = team
         
         Task{ await MainActor.run {
@@ -104,7 +104,7 @@ class LoginViewModel: ObservableObject {
             }
         }
         guard let fetchedTeams, !fetchedTeams.isEmpty, let team = fetchedTeams.first else {
-            throw "failfetchteam"
+            throw NSLocalizedstring("failfetchteam", comment: "")
         }
         
         return team
