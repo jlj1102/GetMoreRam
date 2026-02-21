@@ -1,7 +1,7 @@
 <div align="center">
   <img width="256" height="256" alt="icon"  src="https://github.com/user-attachments/assets/eb5a6a3d-0357-4175-b6fe-50c45e7f3d3c" class="center"/> 
   
-  <a href ="https://github.com/jlj1102/GetMoreRam/blob/multilang/README_CN.md">中文</a>
+  <a href ="https://github.com/jlj1102/GetMoreRam/blob/main/README_CN.md">中文</a>
 </div>
 
 # Get More Ram
