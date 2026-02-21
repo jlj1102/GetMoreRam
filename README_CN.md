@@ -1,5 +1,9 @@
-
-<a href ="https://github.com/jlj1102/GetMoreRam/blob/multilang/README.md">English</a>
+<div align="center">
+  <img width="256" height="256" alt="icon"  src="https://github.com/user-attachments/assets/eb5a6a3d-0357-4175-b6fe-50c45e7f3d3c" class="center"/> 
+  
+  <a href ="https://github.com/jlj1102/GetMoreRam/blob/multilang/README.md">English</a>
+  </div>
+  
 # Get More Ram
 <br>这是一个从[StosSign](https://github.com/stossy11/StosSign)分离出来的简单软件，它可以让你在没有Xcode的情况下给你的侧载软件增加内存上限。
 
