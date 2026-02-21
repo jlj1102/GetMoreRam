@@ -71,7 +71,7 @@ class AppIDViewModel : ObservableObject {
     
     func fetchAppIDs() async throws {
         guard let team = DataManager.shared.model.team, let session = DataManager.shared.model.session else {
-            throw "loginfirst"
+            throw NSLocalizedString("loginfirst", comment: "")
         }
         
         let ids = try await withUnsafeThrowingContinuation { (c: UnsafeContinuation<[AppID], Error>) in

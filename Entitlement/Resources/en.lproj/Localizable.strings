@@ -36,4 +36,5 @@ debugging = "Debugging";
 cancel = "Cancel";
 succeedteamfetch = "Successfully fetched team";
 failfetchteam = "Unable to fetch team!";
+aniservdesc = "Default is (https://ani.sidestore.io), you may need to restart the app for it to take effect.";
 

@@ -50,6 +50,8 @@ struct SettingsView: View {
                     TextField("", text: $sharedModel.anisetteServerURL)
                         .multilineTextAlignment(.trailing)
                 }
+            } footer: {
+                Text("aniservdesc")
             }
             
             Section {
