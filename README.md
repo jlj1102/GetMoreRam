@@ -1,7 +1,10 @@
+<div align="center">
+  <img width="256" height="256" alt="icon"  src="https://github.com/user-attachments/assets/eb5a6a3d-0357-4175-b6fe-50c45e7f3d3c" class="center"/> 
+  
+  <a href ="https://github.com/jlj1102/GetMoreRam/blob/multilang/README_CN.md">中文</a>
+</div>
 
-<a href ="https://github.com/jlj1102/GetMoreRam/blob/multilang/README_CN.md">中文</a>
 # Get More Ram
-
 A simple [StosSign](https://github.com/stossy11/StosSign) wrapper app that allows you to enable "Increased Memory Limit" for your sideloaded apps without using Xcode.
 <br>The English and Chinese translation of this app is available! 
 
@@ -17,7 +20,7 @@ A simple [StosSign](https://github.com/stossy11/StosSign) wrapper app that allow
 <br>Tip: Usually the app with "Increased Memory Limit" has a total memory above 4GB (about 6GB)
 <br>You can check it out (especially sideloaded games) by enabling "Show Graphics HUD" in Developer in System Settings.
 
-# 鸣谢/Credits
+# Credits
 Stossy11 - For StosSign.<br>
 SideStore - Anisette Data fetching codes are stolen from SideStore<br>
 jlj1102 - This fork with icons and Chinese translation
