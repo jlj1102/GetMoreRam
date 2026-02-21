@@ -19,6 +19,6 @@
 <br>提示：一般而言，你的软件共用内存将会从4GB到6GB，你可以去系统设置开发者页打开图形HUD以进行内存监控
 
 # 鸣谢
-Stossy11 - Stossign的制作者
-SideStore - 从SideStore借来获取数据的代码
+Stossy11 - Stossign的制作者<br>
+SideStore - 从SideStore借来获取数据的代码<br>
 jlj1102 - 这个fork的中文以及图标
