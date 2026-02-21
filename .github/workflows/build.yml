@@ -52,8 +52,6 @@ jobs:
           file_to_build=`ls -A | grep -i \\.xcworkspace\$ || ls -A | grep -i \\.xcodeproj\$`
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           echo "file_to_build=$file_to_build" >> $GITHUB_OUTPUT
-      - name: Debug XCodebuild
-        run: xcodebuild --help
       - name: Build
         env:
           scheme: ${{ steps.scheme.outputs.scheme }}
@@ -120,6 +118,7 @@ jobs:
         with:
           name: ${{ env.scheme }}.ipa
           path: ${{ env.scheme }}.ipa
+          compression-level: 0
 
   release__nightly:
     name: Nightly Release

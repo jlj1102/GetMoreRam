@@ -27,7 +27,7 @@ class AppIDModel : ObservableObject, Hashable {
     
     func addIncreasedMemory() async throws {
         guard let team = DataManager.shared.model.team, let session = DataManager.shared.model.session else {
-            throw "请你先登录喵～ 登录出错了喵～"
+            throw NSLocalizedString("loginfirst", comment: "")
         }
 
         let dateFormatter = ISO8601DateFormatter()
@@ -71,7 +71,7 @@ class AppIDViewModel : ObservableObject {
     
     func fetchAppIDs() async throws {
         guard let team = DataManager.shared.model.team, let session = DataManager.shared.model.session else {
-            throw "先登录喵～"
+            throw NSLocalizedString("loginfirst", comment: "")
         }
         
         let ids = try await withUnsafeThrowingContinuation { (c: UnsafeContinuation<[AppID], Error>) in
@@ -80,7 +80,7 @@ class AppIDViewModel : ObservableObject {
                     c.resume(throwing: error)
                 }
                 guard let appIDs else {
-                    c.resume(throwing: "AppIDs is nil. Please try again or reopen the app.")
+                    c.resume(throwing: NSLocalizedString("nulappid", comment: ""))
                     return
                 }
                 c.resume(returning: appIDs)

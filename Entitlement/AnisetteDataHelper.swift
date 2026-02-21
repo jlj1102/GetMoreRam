@@ -3,6 +3,7 @@
 //  AltStore
 //
 //  Created by Riley Testut on 1/7/20.
+// Translated by jlj1102 on 2026/2/30.
 //  Copyright © 2020 Riley Testut. All rights reserved.
 //
 
@@ -37,10 +38,10 @@ final class AnisetteDataHelper: WebSocketDelegate
     {
         
         if url == nil {
-            throw "找不到Anisette服务器喵～（如果被误删了请你重装）"
+            throw (NSLocalizedString("noanisetteurl", comment: ""))
         }
         
-        self.printOut("Anisette URL: \(self.url!.absoluteString)")
+        self.printOut("\(NSLocalizedString("anisetteurl", comment: "")) \(self.url!.absoluteString)")
         
         let ans : AnisetteData
         if let identifier = Keychain.shared.identifier,
@@ -67,7 +68,7 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("Error message contains -45061 (not provisioned), resetting adi.pb and retrying")
                         Keychain.shared.adiPb = nil
                         return try await provision()
-                    } else { throw message ?? "未知错误" }
+                    } else { throw message ?? NSLocalizedString("unkerr", comment: "") }
                 }
             }
             
@@ -114,21 +115,21 @@ final class AnisetteDataHelper: WebSocketDelegate
                 let jsonData = try JSONEncoder().encode(formattedJSON)
                 let anisette = try JSONDecoder().decode(AnisetteData.self, from: jsonData)
                 
-                self.printOut("Anisette服务器有效！")
+                self.printOut("\(NSLocalizedString("validanisetteurl", comment: ""))")
                 return anisette
             } catch {
-                self.printOut("Anisette服务器炸了!!!!")
+                self.printOut("\(NSLocalizedString("invalidanisetteurl", comment: ""))")
                 if v3 {
-                    throw "Invalid anisette (the returned data may not have all the required fields)"
+                    throw NSLocalizedString("invalidanisettefields", comment: "")
                 } else {
-                    throw "Invalid anisette (the returned data may not have all the required fields)"
+                    throw NSLocalizedString("invalidanisettefields", comment: "")
                 }
             }
         } else {
             if v3 {
-                throw "Invalid anisette (the returned data may not be in JSON)"
+                throw NSLocalizedString("invalidanisettejson", comment: "")
             } else {
-                throw "Invalid anisette (the returned data may not be in JSON)"
+                throw NSLocalizedString("invalidanisettejson", comment: "")
             }
         }
     }
@@ -156,7 +157,7 @@ final class AnisetteDataHelper: WebSocketDelegate
             return try await self.startProvisioningSession()
         } else {
             self.printOut("Apple didn't give valid URLs! Got response: \(String(data: data, encoding: .utf8) ?? "not utf8")")
-            throw "Apple开发者api没有提供网址，请你稍后再试"
+            throw NSLocalizedString("novalidurlsgiven", comment: "")
         }
 
         
@@ -356,8 +357,8 @@ final class AnisetteDataHelper: WebSocketDelegate
                         self.printOut("X-Mme-Device-Id: \(self.deviceId!)")
                         
                         return
-                    } else { throw "v1 server is not supported" }
-                } else { throw "Couldn't fetch client info. The returned data may not be in JSON" }
+                    } else { throw NSLocalizedString("invalidv1server", comment: "") }
+                } else { throw NSLocalizedString("invalidclientinfo", comment: "") }
             }
 
     }

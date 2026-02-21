@@ -1,0 +1,40 @@
+// From AppIDView.swift
+appids = "App IDs";
+addmemlimit = "Add Increased Memory Limit";
+srvresp = "Server Response";
+err = "ERROR";
+ok = "OK";
+refresh = "Refresh";
+loginfirst = "Please Login first (OR your login status is bad)";
+// From AnisetteDataHelper.swift
+noanisetteurl = "No Anisette Server is found. (https://ani.sidestore.io By Default)";
+novalidurlsgiven = "Apple didn't give valid URLs. Please try again later";
+anisetteurl = "Anisette URL:";
+nilappid = "AppIDs is nil. Please try again or reopen the app.";
+unkerr = "Unknown Error";
+validanisetteurl = "Anisette URL valid!";
+nilaccountsession = "Account or session is nil. Please try again or reopen the app.";
+succeedlogin = "Logged in successfully!";
+invalidanisetteurl = "Anisette URL is not valid!!!";
+invalidanisettejson = "Invalid anisette (the returned data may not be in JSON)";
+invalidanisettefields = "Invalid anisette (the returned data may not have all the required fields)";
+invalidv1server = "Invalid server";
+invalidclientinfo = "Couldn't fetch client info. The returned data may not be in JSON";
+// From SettingsView.swift & LoginViewModel.swift
+settings = "Settings";
+email = "Email";
+teamid = "Team ID";
+login = "Login";
+account = "Account";
+aniserv = "Anisette Server";
+clrkey = "Clear Keychain";
+clrkeydesc = "If something went wrong during signing in, please try to clean up the keychain, repoen the app and try again.";
+password = "Password";
+twofa = "Verification Code";
+continue = "Continue";
+debugging = "Debugging";
+cancel = "Cancel";
+succeedteamfetch = "Successfully fetched team";
+failfetchteam = "Unable to fetch team!";
+aniservdesc = "Default is ( https://ani.sidestore.io ), you may need to restart the app for it to take effect.";
+
