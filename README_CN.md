@@ -20,5 +20,5 @@
 
 # 鸣谢
 Stossy11 - Stossign的制作者
-SideStore - 从SideStore借来获取数据的代码
-jlj1102 - 这个fork的中文以及图标
+<br>SideStore - 从SideStore借来获取数据的代码
+<br>jlj1102 - 这个fork的中文以及图标
