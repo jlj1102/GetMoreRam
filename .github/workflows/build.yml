@@ -118,6 +118,7 @@ jobs:
         with:
           name: ${{ env.scheme }}.ipa
           path: ${{ env.scheme }}.ipa
+          compression-level: 0
 
   release__nightly:
     name: Nightly Release
