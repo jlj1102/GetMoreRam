@@ -44,6 +44,15 @@
         "branch" : "main",
         "revision" : "a7f275fb4830ea48adf536fcddee7d05471970d0"
       }
+    },
+    {
+      "identity" : "PrivacyScreen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/abhay/PrivacyScreen.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d8e6c02f904ff90d0554af9aeedd9a119ded310b"
+      }
     }
   ],
   "version" : 3
