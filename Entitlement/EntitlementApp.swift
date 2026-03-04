@@ -4,7 +4,7 @@
 //
 //  Created by s s on 2025/3/14.
 //
-
+import PrivacyScreen
 import SwiftUI
 
 @main
