@@ -12,7 +12,7 @@
 		4EE1A6092D954CE9007D655E /* StosSign in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE1A6082D954CE9007D655E /* StosSign */; };
 		EN_LPROJ_BUILD /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EN_LPROJ /* en.lproj */; };
 		ZH_LPROJ_BUILD /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ZH_LPROJ /* zh-Hans.lproj */; };
-
+		123456ABCDEF123456ABCDED /* PrivacyScreen in Frameworks */ = {isa = PBXBuildFile; fileRef = 123456ABCDEF123456ABCDEE /* PrivacyScreen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +51,7 @@
 				4EE1A6092D954CE9007D655E /* StosSign in Frameworks */,
 				17EE68B32D848EF000B77523 /* KeychainAccess in Frameworks */,
 				17EE68B02D848EA100B77523 /* Starscream in Frameworks */,
+				123456ABCDEF123456ABCDED /* PrivacyScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +108,7 @@
 				17EE68AF2D848EA100B77523 /* Starscream */,
 				17EE68B22D848EF000B77523 /* KeychainAccess */,
 				4EE1A6082D954CE9007D655E /* StosSign */,
+				123456ABCDEF123456ABCDEE /* PrivacyScreen */,
 			);
 			productName = Entitlement;
 			productReference = 173496F02D847E82007994DB /* Entitlement.app */;
@@ -141,6 +143,7 @@
 				17EE68AE2D848EA100B77523 /* XCRemoteSwiftPackageReference "Starscream" */,
 				17EE68B12D848EF000B77523 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				4EE1A6072D954CE9007D655E /* XCRemoteSwiftPackageReference "StosSign" */,
+				123456ABCDEF123456ABCDEF /* XCRemoteSwiftPackageReference "PrivacyScreen" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 173496F12D847E82007994DB /* Products */;
@@ -406,6 +409,14 @@
 				revision = 70a80bdd2b570020e917ec4a6fb79a8cf4ba1100;
 			};
 		};
+		123456ABCDEF123456ABCDEF /* XCRemoteSwiftPackageReference "PrivacyScreen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/abhay/PrivacyScreen.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -423,6 +434,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4EE1A6072D954CE9007D655E /* XCRemoteSwiftPackageReference "StosSign" */;
 			productName = StosSign;
+		};
+		123456ABCDEF123456ABCDEE /* PrivacyScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 123456ABCDEF123456ABCDEF /* XCRemoteSwiftPackageReference "PrivacyScreen" */;
+			productName = PrivacyScreen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
