@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StosSign
+import PrivacyScreen
 
 struct SettingsView: View {
 
@@ -28,11 +29,13 @@ struct SettingsView: View {
                         Text("email")
                         Spacer()
                         Text(email)
+                            .privacySensitive(level: .high)
                     }
                     HStack {
                         Text("teamid")
                         Spacer()
                         Text(teamId)
+                            .privacySensitive(level: .high)
                     }
                 } else {
                     Button("login") {
@@ -85,6 +88,7 @@ struct SettingsView: View {
                         .disabled(viewModel.isLoginInProgress)
                 } header: {
                     Text("Apple ID")
+                        .privacySensitive(level: .high)
                 }
                 Section {
                     SecureField("", text: $viewModel.password)
@@ -97,6 +101,7 @@ struct SettingsView: View {
                         TextField("", text: $viewModel.verificationCode)
                     } header: {
                         Text("twofa")
+                            .privacySensitive(level: .high)
                     }
                 }
                 Section {
@@ -110,6 +115,7 @@ struct SettingsView: View {
                         .font(.system(.subheadline, design: .monospaced))
                 } header: {
                     Text("debugging")
+                        .privacySensitive(level: .medium)
                 }
             }
             .navigationTitle("login")
