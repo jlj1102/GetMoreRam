@@ -67,6 +67,7 @@ struct AppIDView : View {
                             AppIDEditView(viewModel: appID)
                         } label: {
                             Text(appID.bundleID)
+                            .privacySensitive(level: .medium)
                         }
                     }
                 } header: {
